@@ -1,0 +1,34 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "JavaScript高级程序设计",
+      "author": "Nicholas C. Zakas",
+      "publisher": "人民邮电出版社"
+    },
+    {
+      "id": 2,
+      "title": "深入理解ES6",
+      "author": "Nicholas C. Zakas",
+      "publisher": "电子工业出版社"
+    },
+    {
+      "id": 3,
+      "title": "CSS揭秘",
+      "author": "Lea Verou",
+      "publisher": "人民邮电出版社"
+    },
+    {
+      "id": 4,
+      "title": "HTTP权威指南",
+      "author": "David Gourley",
+      "publisher": "人民邮电出版社"
+    },
+    {
+      "id": 5,
+      "title": "算法导论",
+      "author": "Thomas H. Cormen",
+      "publisher": "机械工业出版社"
+    }
+  ]
+}

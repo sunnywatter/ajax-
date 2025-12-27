@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 图书管理系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>📚 图书管理系统</h1>
+            <h2>用户登录</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" placeholder="请输入用户名" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="请输入密码" required>
+                </div>
+                
+                <div id="loginStatus" class="login-status"></div>
+                
+                <button type="submit" class="login-btn">登录</button>
+            </form>
+            
+            <div class="login-info">
+                <p>提示：输入任意用户名和密码即可登录</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 登录表单处理
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const statusEl = document.getElementById('loginStatus');
+            
+            // 显示登录中状态
+            statusEl.textContent = '正在登录...';
+            statusEl.className = 'login-status info';
+            
+            // 模拟登录延迟
+            setTimeout(() => {
+                // 无论输入什么，都设置登录成功状态
+                localStorage.setItem('isLoggedIn', 'true');
+                
+                // 显示登录成功
+                statusEl.textContent = '登录成功！正在跳转...';
+                statusEl.className = 'login-status success';
+                
+                // 跳转到主页面
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

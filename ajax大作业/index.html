@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极简AJAX图书管理系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 图书管理系统</h1>
+            <button id="logoutBtn" class="logout-btn">登出</button>
+        </div>
+        
+        <!-- 搜索区域 -->
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="搜索书名或作者...">
+            <button id="searchBtn">搜索</button>
+            <button id="resetBtn">重置</button>
+        </div>
+        
+        <!-- 添加图书表单 -->
+        <div class="add-section">
+            <h3>添加新图书</h3>
+            <form id="addForm">
+                <input type="text" id="title" placeholder="书名" required>
+                <input type="text" id="author" placeholder="作者" required>
+                <input type="text" id="publisher" placeholder="出版社" required>
+                <button type="submit">添加图书</button>
+            </form>
+        </div>
+        
+        <!-- 状态显示 -->
+        <div id="status" class="status"></div>
+        
+        <!-- 图书列表 -->
+        <div class="books-section">
+            <h3>图书列表</h3>
+            <div id="loading" class="loading">加载中...</div>
+            <table id="booksTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>书名</th>
+                        <th>作者</th>
+                        <th>出版社</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="booksBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
